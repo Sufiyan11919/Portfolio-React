@@ -53,7 +53,7 @@ const Navbar = () => {
                     </a>
                 </li>
             </ul>
-            {/* hamburger menu */}
+            
             <div className="hamburger">
                 <a href="/Home" onClick={()=> setmediaIcons(!mediaIcons)}>
                     <GiHamburgerMenu/>
