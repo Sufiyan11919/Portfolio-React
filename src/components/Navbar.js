@@ -1,7 +1,12 @@
 import React from 'react'
-import {FaFacebookSquare, FaInstagramSquare, FaCentercode} from 'react-icons/fa' ;
+import { FaInstagramSquare, FaCentercode} from 'react-icons/fa';
+import { BsGithub} from "react-icons/bs";
+import {GiHamburgerMenu} from 'react-icons/gi'
 import "./navbar.css"
+import { useState } from 'react';
 const Navbar = () => {
+    const [mediaIcons, setmediaIcons] = useState(false)
+
   return (
     <>
     <nav className="navbar">
@@ -12,19 +17,19 @@ const Navbar = () => {
             </h2>
         </div>
         {/* pages */}
-        <div className="pages">
+        <div className= {mediaIcons ? "pages mobile-pages": "pages"}>
             <ul>
                 <li>
-                    <a href="#">Home</a>
+                    <a href="/">Home</a>
                 </li>
                 <li>
-                    <a href="#">About</a>
+                    <a href="/About">About</a>
                 </li>
                 <li>
-                    <a href="#">services</a>
+                    <a href="/Work">Work</a>
                 </li>
                 <li>
-                    <a href="#">contact</a>
+                    <a href="/Contact">contact</a>
                 </li>
             </ul>
         </div>
@@ -32,8 +37,8 @@ const Navbar = () => {
         <div className="social-media">
             <ul className="smd">
                 <li>
-                    <a href="" target="_blank">
-                    <FaFacebookSquare className='fb'/>
+                    <a href="https://github.com/Sufiyan11919" target="_blank">
+                    <BsGithub className='gh'/>
                     </a>
                 </li>
                 <li>
@@ -47,15 +52,21 @@ const Navbar = () => {
                     </a>
                 </li>
             </ul>
+            {/* hamburger menu */}
+            <div className="hamburger">
+                <a href="#" onClick={()=> setmediaIcons(!mediaIcons)}>
+                    <GiHamburgerMenu/>
+                </a> 
+            </div>
         </div>
 
     </nav>
-    {/* hero */}
-    <section>
-        <h1>about me</h1>
-    </section>
+
     </>
   )
 }
 
 export default Navbar
+
+
+// FaFacebookSquare,
