@@ -4,6 +4,7 @@ import { BsGithub} from "react-icons/bs";
 import {GiHamburgerMenu} from 'react-icons/gi'
 import "./navbar.css"
 import { useState } from 'react';
+// import { Link } from 'react-router-dom';
 const Navbar = () => {
     const [mediaIcons, setmediaIcons] = useState(false)
 
@@ -37,24 +38,24 @@ const Navbar = () => {
         <div className="social-media">
             <ul className="smd">
                 <li>
-                    <a href="https://github.com/Sufiyan11919" target="_blank">
+                    <a href="https://github.com/Sufiyan11919" rel="noreferrer" target="_blank">
                     <BsGithub className='gh'/>
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.instagram.com/_traveller_98__/" target="_blank">
+                    <a href="https://www.instagram.com/_traveller_98__/" rel="noreferrer" target="_blank">
                     <FaInstagramSquare className='ig'/>
                     </a>
                 </li>
                 <li>
-                    <a href="https://leetcode.com/sufiyan11919/" target="_blank">
+                    <a href="https://leetcode.com/sufiyan11919/" rel="noreferrer" target="_blank">
                     <FaCentercode className='lc'/>
                     </a>
                 </li>
             </ul>
             {/* hamburger menu */}
             <div className="hamburger">
-                <a href="#" onClick={()=> setmediaIcons(!mediaIcons)}>
+                <a href="/Home" onClick={()=> setmediaIcons(!mediaIcons)}>
                     <GiHamburgerMenu/>
                 </a> 
             </div>
